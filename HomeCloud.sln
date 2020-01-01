@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeCloud.Drive", "HomeCloud.Drive\HomeCloud.Drive.csproj", "{AC789BED-7CD0-4DB3-8BB5-BC9FC2890219}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeCloud.Drive.Services", "HomeCloud.Drive.Services\HomeCloud.Drive.Services.csproj", "{B8BD49F5-673E-4AE6-BF6C-257CA93D9E1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drive", "Drive", "{8064952A-C9ED-42BA-870D-2B304B460076}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeCloud.Drive.Core", "HomeCloud.Drive.Core\HomeCloud.Drive.Core.csproj", "{D4EC3DCE-B079-4277-BF38-9E803CECB977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeCloud.Drive.Data", "HomeCloud.Drive.Data\HomeCloud.Drive.Data.csproj", "{991538DB-04F1-4F63-BC0F-099C6A05787A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeCloud.Drive.DIRegistrator", "HomeCloud.Drive.DIRegistrator\HomeCloud.Drive.DIRegistrator.csproj", "{5408B2D6-277A-4E0B-96C0-43083FACE584}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC789BED-7CD0-4DB3-8BB5-BC9FC2890219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC789BED-7CD0-4DB3-8BB5-BC9FC2890219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC789BED-7CD0-4DB3-8BB5-BC9FC2890219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC789BED-7CD0-4DB3-8BB5-BC9FC2890219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8BD49F5-673E-4AE6-BF6C-257CA93D9E1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8BD49F5-673E-4AE6-BF6C-257CA93D9E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8BD49F5-673E-4AE6-BF6C-257CA93D9E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8BD49F5-673E-4AE6-BF6C-257CA93D9E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4EC3DCE-B079-4277-BF38-9E803CECB977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4EC3DCE-B079-4277-BF38-9E803CECB977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4EC3DCE-B079-4277-BF38-9E803CECB977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4EC3DCE-B079-4277-BF38-9E803CECB977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991538DB-04F1-4F63-BC0F-099C6A05787A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991538DB-04F1-4F63-BC0F-099C6A05787A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991538DB-04F1-4F63-BC0F-099C6A05787A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991538DB-04F1-4F63-BC0F-099C6A05787A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5408B2D6-277A-4E0B-96C0-43083FACE584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5408B2D6-277A-4E0B-96C0-43083FACE584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5408B2D6-277A-4E0B-96C0-43083FACE584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5408B2D6-277A-4E0B-96C0-43083FACE584}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC789BED-7CD0-4DB3-8BB5-BC9FC2890219} = {8064952A-C9ED-42BA-870D-2B304B460076}
+		{B8BD49F5-673E-4AE6-BF6C-257CA93D9E1D} = {8064952A-C9ED-42BA-870D-2B304B460076}
+		{D4EC3DCE-B079-4277-BF38-9E803CECB977} = {8064952A-C9ED-42BA-870D-2B304B460076}
+		{991538DB-04F1-4F63-BC0F-099C6A05787A} = {8064952A-C9ED-42BA-870D-2B304B460076}
+		{5408B2D6-277A-4E0B-96C0-43083FACE584} = {8064952A-C9ED-42BA-870D-2B304B460076}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F15ACE4-6E79-4081-B9B7-72D164D2937A}
+	EndGlobalSection
+EndGlobal
