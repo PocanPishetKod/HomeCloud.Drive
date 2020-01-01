@@ -31,8 +31,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\modals\add-directory-modal.component.ts" />
+    <None Remove="ClientApp\src\app\models\directoryDescryptor.ts" />
+    <None Remove="ClientApp\src\app\models\fileDescryptor.ts" />
+    <None Remove="ClientApp\src\app\services\directoryDescryptorRestService.ts" />
+    <None Remove="ClientApp\src\app\services\fileDescryptorRestService.ts" />
+    <None Remove="ClientApp\src\app\services\routerDescryptors.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HomeCloud.Drive.DIRegistrator\HomeCloud.Drive.DIRegistrator.csproj" />
     <ProjectReference Include="..\HomeCloud.Drive.Services\HomeCloud.Drive.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\modals\add-directory-modal.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\directoryDescryptor.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\fileDescryptor.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\directoryDescryptorRestService.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\fileDescryptorRestService.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\routerDescryptors.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

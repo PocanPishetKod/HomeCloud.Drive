@@ -87,7 +87,7 @@ namespace HomeCloud.Drive.Services
             }
 
             DirectoryDescriptor directoryDescriptor;
-            if (directoryModel.ParentDirectoryDescryptorId != 0)
+            if (directoryModel.ParentDirectoryDescryptorId.HasValue)
             {
                 directoryDescriptor = await AddDirectoryWithParent(directoryModel);
             }
