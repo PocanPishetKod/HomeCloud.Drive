@@ -15,18 +15,32 @@ export class DirectoryDescryptorRestService {
   }
 
   public getDirectoryDescryptors(parentDirectoryDescryptorId?: number): Observable<IDirectoryDescryptor[]> {
-    return this.httpClient.get<IDirectoryDescryptor[]>(this.routeDescryptor.getManyRoute(parentDirectoryDescryptorId));
+    return this.httpClient
+      .get<IDirectoryDescryptor[]>(this.routeDescryptor.getManyRoute(parentDirectoryDescryptorId));
   }
 
   public async getDirectoryDescryptorsAsync(parentDirectoryDescryptorId?: number): Promise<IDirectoryDescryptor[]> {
-    return await this.getDirectoryDescryptors(parentDirectoryDescryptorId).toPromise();
+    return await this
+      .getDirectoryDescryptors(parentDirectoryDescryptorId).toPromise();
   }
 
   public saveDirectoryDescryptor(directoryDescryptor: IDirectoryDescryptor): Observable<IDirectoryDescryptor> {
-    return this.httpClient.post<IDirectoryDescryptor>(this.routeDescryptor.getSaveRoute(), directoryDescryptor);
+    return this
+      .httpClient.post<IDirectoryDescryptor>(this.routeDescryptor.getSaveRoute(), directoryDescryptor);
   }
 
   public async saveDirectoryDescryptorAsync(directoryDescryptor: IDirectoryDescryptor): Promise<IDirectoryDescryptor> {
-    return await this.saveDirectoryDescryptor(directoryDescryptor).toPromise();
+    return await this
+      .saveDirectoryDescryptor(directoryDescryptor).toPromise();
+  }
+
+  public deleteDirectoryDescryptor(directoryDescryptorId: number): Observable<void> {
+    return this
+      .httpClient.delete<void>(this.routeDescryptor.getDeleteRoute(directoryDescryptorId));
+  }
+
+  public async deleteDirectoryDescryptorAsync(directoryDescryptorId: number): Promise<void> {
+    return await this
+      .deleteDirectoryDescryptor(directoryDescryptorId).toPromise();
   }
 }

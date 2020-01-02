@@ -13,6 +13,9 @@ var DirectoryDescryptorRouteDescryptor = /** @class */ (function () {
     DirectoryDescryptorRouteDescryptor.prototype.getSaveRoute = function () {
         return this.baseRoute;
     };
+    DirectoryDescryptorRouteDescryptor.prototype.getDeleteRoute = function (directoryDescryptorId) {
+        return this.baseRoute + "/" + directoryDescryptorId;
+    };
     return DirectoryDescryptorRouteDescryptor;
 }());
 exports.DirectoryDescryptorRouteDescryptor = DirectoryDescryptorRouteDescryptor;
@@ -28,6 +31,15 @@ var FileDescryptorRouteDescryptor = /** @class */ (function () {
     };
     FileDescryptorRouteDescryptor.prototype.getSaveRoute = function () {
         return this.baseRoute;
+    };
+    FileDescryptorRouteDescryptor.prototype.getDownloadRoute = function (fileDescryptorId) {
+        return this.baseRoute + "/" + fileDescryptorId + "/download";
+    };
+    FileDescryptorRouteDescryptor.prototype.getUploadRoute = function () {
+        return this.baseRoute + "/upload";
+    };
+    FileDescryptorRouteDescryptor.prototype.getDeleteRoute = function (fileDescryptorId) {
+        return this.baseRoute + "/" + fileDescryptorId;
     };
     return FileDescryptorRouteDescryptor;
 }());

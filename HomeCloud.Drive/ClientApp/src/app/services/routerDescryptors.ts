@@ -12,6 +12,10 @@ export class DirectoryDescryptorRouteDescryptor {
   public getSaveRoute(): string {
     return this.baseRoute;
   }
+
+  public getDeleteRoute(directoryDescryptorId: number): string {
+    return this.baseRoute + "/" + directoryDescryptorId; 
+  }
 }
 
 export class FileDescryptorRouteDescryptor {
@@ -27,5 +31,17 @@ export class FileDescryptorRouteDescryptor {
 
   public getSaveRoute(): string {
     return this.baseRoute;
+  }
+
+  public getDownloadRoute(fileDescryptorId: number): string {
+    return this.baseRoute + "/" + fileDescryptorId + "/download";
+  }
+
+  public getUploadRoute(): string {
+    return this.baseRoute + "/upload";
+  }
+
+  public getDeleteRoute(fileDescryptorId: number): string {
+    return this.baseRoute + "/" + fileDescryptorId;
   }
 }

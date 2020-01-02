@@ -5,6 +5,8 @@ import { IFileDescryptor } from '../models/fileDescryptor';
 import { IDirectoryDescryptor } from '../models/directoryDescryptor';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddDirectoryModalComponent } from '../modals/add-directory-modal.component';
+import { UploadFileComponent } from '../modals/upload-file.component';
+import { IUploadFile } from '../models/uploadFile';
 
 @Component({
   selector: 'app-home',
@@ -21,8 +23,13 @@ export class HomeComponent {
   }
 
   private getNewDirectoryDescryptor(name: string): IDirectoryDescryptor {
-    let parentId: number = this.currentDirectoryDescryptor ? this.currentDirectoryDescryptor.id : null
+    let parentId: number = this.currentDirectoryDescryptor ? this.currentDirectoryDescryptor.id : null;
     return <IDirectoryDescryptor>{ id: 0, name: name, parentDirectoryDescryptorId: parentId };
+  }
+
+  private getNewUploadFile(file: File): IUploadFile {
+    let parentId: number = this.currentDirectoryDescryptor ? this.currentDirectoryDescryptor.id : null;
+    return <IUploadFile>{ file: file, directoryDescryptorId: parentId };
   }
 
   private async updateDescryptors(directoryDescryptor?: IDirectoryDescryptor): Promise<void> {
@@ -48,7 +55,10 @@ export class HomeComponent {
     this.directoryDescryptors.push(createdDirectoryDescryptor);
   }
 
-  public uploadFile(): void {
-
+  public async uploadFile(): Promise<void> {
+    let openedModal = this.modalService.open(UploadFileComponent);
+    let file: File = await openedModal.result;
+    let createdFileDescryptor = await this.fileDescryptorApi.uploadFileAsync(this.getNewUploadFile(file));
+    this.fileDescryptors.push(createdFileDescryptor);
   }
 }

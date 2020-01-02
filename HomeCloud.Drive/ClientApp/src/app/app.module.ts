@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { AddDirectoryModalComponent } from './modals/add-directory-modal.component';
+import { FileDescryptorComponent } from './fileDescryptor/file-descryptor.component';
+import { DirectoryDescryptorComponent } from './directoryDescryptor/directory-descryptor.component';
+import { UploadFileComponent } from './modals/upload-file.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { AddDirectoryModalComponent } from './modals/add-directory-modal.compone
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    AddDirectoryModalComponent
+    AddDirectoryModalComponent,
+    FileDescryptorComponent,
+    DirectoryDescryptorComponent,
+    UploadFileComponent
   ],
   imports: [
     NgbModule,
@@ -34,6 +40,9 @@ import { AddDirectoryModalComponent } from './modals/add-directory-modal.compone
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AddDirectoryModalComponent]
+  entryComponents: [
+    AddDirectoryModalComponent,
+    UploadFileComponent
+  ]
 })
 export class AppModule { }

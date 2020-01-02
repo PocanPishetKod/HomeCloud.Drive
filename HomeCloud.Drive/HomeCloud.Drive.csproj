@@ -31,9 +31,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\fileDescryptor\file-descryptor.component.ts" />
     <None Remove="ClientApp\src\app\modals\add-directory-modal.component.ts" />
+    <None Remove="ClientApp\src\app\modals\upload-file.component.ts" />
     <None Remove="ClientApp\src\app\models\directoryDescryptor.ts" />
     <None Remove="ClientApp\src\app\models\fileDescryptor.ts" />
+    <None Remove="ClientApp\src\app\models\uploadFile.ts" />
     <None Remove="ClientApp\src\app\services\directoryDescryptorRestService.ts" />
     <None Remove="ClientApp\src\app\services\fileDescryptorRestService.ts" />
     <None Remove="ClientApp\src\app\services\routerDescryptors.ts" />
@@ -45,9 +48,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\fileDescryptor\file-descryptor.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\modals\add-directory-modal.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modals\upload-file.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\directoryDescryptor.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\fileDescryptor.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models\uploadFile.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\directoryDescryptorRestService.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\fileDescryptorRestService.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\routerDescryptors.ts" />

@@ -46,8 +46,8 @@ namespace HomeCloud.Drive.Controllers
             return Ok(directoryDescryptor);
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> Delete([FromBody] int directoryDescryptorId)
+        [HttpDelete("{directoryDescryptorId}")]
+        public async Task<IActionResult> Delete(int directoryDescryptorId)
         {
             if (directoryDescryptorId <= 0)
             {
