@@ -21,8 +21,13 @@ export class FileDescryptorRestService {
   }
 
   public async getFileDescryptorsAsync(directoryDescryptorId?: number): Promise<IFileDescryptor[]> {
-    return await this
+    let result = await this
       .getFileDescryptors(directoryDescryptorId).toPromise();
+    if (!result || result.length == 0) {
+      return [];
+    }
+
+    return result;
   }
 
   public deleteFileDescryptor(fileDescryptorId: number): Observable<void> {

@@ -1,10 +1,15 @@
 <button (click)="createDirectory()">Создать папку</button>
 <button (click)="uploadFile()">Загрузить файл</button>
-<ul>
-  <directory-descryptor (click)="goToDirectory(directoryDescryptor)"
-                        *ngFor="let directoryDescryptor of directoryDescryptors"
-                        [directoryDescryptor]="directoryDescryptor"></directory-descryptor>
 
-  <file-descryptor *ngFor="let fileDescryptor of fileDescryptors"
-                   [fileDescryptor]="fileDescryptor"></file-descryptor>
-</ul>
+<div>
+  <span *ngIf="previousDirectoryDescryptors && previousDirectoryDescryptors.length > 0" (click)="goToPreviousDirectory()">Назад</span> <span *ngIf="currentDirectoryDescryptor">{{currentDirectoryDescryptor.name}}</span>
+</div>
+
+<div class="file-container">
+  <div class="file-container-item" *ngFor="let directoryDescryptor of directoryDescryptors">
+    <directory-descryptor (click)="goToDirectory(directoryDescryptor)" [directoryDescryptor]="directoryDescryptor"></directory-descryptor>
+  </div>
+  <div class="file-container-item" *ngFor="let fileDescryptor of fileDescryptors">
+    <file-descryptor [fileDescryptor]="fileDescryptor"></file-descryptor>
+  </div>
+</div>

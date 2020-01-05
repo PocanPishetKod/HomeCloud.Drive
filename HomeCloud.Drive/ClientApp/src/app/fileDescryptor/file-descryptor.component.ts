@@ -4,7 +4,8 @@ import { FileDescryptorRestService } from "../services/fileDescryptorRestService
 
 @Component({
   selector: "file-descryptor",
-  templateUrl: "./file-descryptor.component.html"
+  templateUrl: "./file-descryptor.component.html",
+  styleUrls: ["../css/fileItem.css"]
 })
 export class FileDescryptorComponent {
   @Input() public fileDescryptor: IFileDescryptor;

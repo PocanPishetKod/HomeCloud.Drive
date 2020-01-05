@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IDirectoryDescryptor } from '../models/directoryDescryptor';
 import { DirectoryDescryptorRouteDescryptor } from './routerDescryptors';
@@ -20,8 +20,14 @@ export class DirectoryDescryptorRestService {
   }
 
   public async getDirectoryDescryptorsAsync(parentDirectoryDescryptorId?: number): Promise<IDirectoryDescryptor[]> {
-    return await this
-      .getDirectoryDescryptors(parentDirectoryDescryptorId).toPromise();
+    let result = await this
+      .getDirectoryDescryptors(parentDirectoryDescryptorId).toPromise().then<IDirectoryDescryptor[], HttpErrorResponse>((data) => {
+        return data;
+      }, (error: HttpErrorResponse) => {
+          return error;
+      });
+
+    return <IDirectoryDescryptor[]>result;
   }
 
   public saveDirectoryDescryptor(directoryDescryptor: IDirectoryDescryptor): Observable<IDirectoryDescryptor> {

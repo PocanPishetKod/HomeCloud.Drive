@@ -4,7 +4,8 @@ import { DirectoryDescryptorRestService } from "../services/directoryDescryptorR
 
 @Component({
   selector: "directory-descryptor",
-  templateUrl: "./directory-descryptor.component.html"
+  templateUrl: "./directory-descryptor.component.html",
+  styleUrls: ["../css/fileItem.css"]
 })
 export class DirectoryDescryptorComponent {
   @Input() public directoryDescryptor: IDirectoryDescryptor;

@@ -1,0 +1,20 @@
+.file-item {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.file-name {
+  text-align: center;
+  font-size: 12px;
+  overflow-x: hidden;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-image {
+  justify-content: center;
+  align-items: center;
+}
